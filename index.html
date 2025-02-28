@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diretoria de Avaliação e Promoções</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/script.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <style></style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/logo_DAPROM.png" alt="D A PROM" width="35" height="45" />
+            <h1>DIRETORIA DE AVALIAÇÃO E PROMOÇÕES</h1>
+            <div id="feedbackMessage" class="hidden"></div>
+                <div class="relogio">
+                <div class="clock">
+                <div class="time" id="time">12:00:00</div>
+                </div>
+            </div>
+            <img src="img/logoexer.png" alt="Exército" width="35" height="45" />
+        </div>
+
+        <div class="content">
+            <div class="column_esquerda destino">
+                <h2>Destino</h2>
+                <!-- Lista de militares -->
+                <div class="destino-item">
+                    <img src="img/01.jpg" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">1º Ten Lago:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/02.png" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">1º Ten Giovani:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/03.png" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">2º Ten Bruno:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/s.jpg" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">2º Ten Soares:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/05.jpg" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">3º Sgt A. Vidal:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/06.jpg" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">3º Sgt Diego:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/07.png" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">3º Sgt Isabelly:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/8.jpeg" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">3º Sgt Castro:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/9.jpeg" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">Cb Kevin:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="destino-item">
+                    <img src="img/10.jpeg" alt="Foto do Militar" class="foto-militar" />
+                    <span class="nome">Sd Fagundes:</span>
+                    <div class="status">
+                        <select class="select_destino">
+                            <option value="Fora do Expediente">Fora do Expediente</option>
+                            <option value="Pronto na Seção">Pronto na Seção</option>
+                            <option value="Serviço">Serviço</option>
+                            <option value="Ferias">Ferias</option>
+                            <option value="Folga">Folga</option>
+                            <option value="Licença">Licença</option>
+                            <option value="Missão">Missão</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Pronto na OM">Pronto na OM</option>
+                            <option value="Almoço">Almoço</option>
+                            <option value="Fora da OM">Fora da OM</option>
+                            <option value="Race">Race</option>
+                            <option value="Aofin">Aofin</option>
+                            <option value="Apg">Apg</option>
+                            <option value="B Ap Log Ex">B Ap Log Ex</option>
+                            <option value="Base Adm QGEx">Base Adm QGEx</option>
+                            <option value="C D Ciber">C D Ciber</option>
+                            <option value="CAEx">CAEx</option>
+                            <option value="CCFEx">CCFEx</option>
+                            <option value="CCIEx">CCIEx</option>
+                            <option value="CCOMGEx">CCOMGEx</option>
+                            <option value="CCOMSEx">CCOMSEx</option>
+                            <option value="CDS">CDS</option>
+                            <option value="CIE">CIE</option>
+                            <option value="CITEx">CITEx</option>
+                            <option value="CMB">CMB</option>
+                            <option value="CMP">CMP</option>
+                            <option value="Cmt Ex">Cmt Ex</option>
+                            <option value="COLOG">COLOG</option>
+                            <option value="CONSEF">CONSEF</option>
+                            <option value="CONTIEx">CONTIEx</option>
+                            <option value="COTER">COTER</option>
+                            <option value="CPEx">CPEx</option>
+                            <option value="CTEx">CTEx</option>
+                            <option value="D Abst">D Abst</option>
+                            <option value="D Cont">D Cont</option>
+                            <option value="D Mat">D Mat</option>
+                            <option value="D MAvEx">D MAvEx</option>
+                            <option value="DAP">DAP</option>
+                            <option value="DCEM">DCEM</option>
+                            <option value="DCT">DCT</option>
+                            <option value="DEC">DEC</option>
+                            <option value="DECEx">DECEx</option>
+                            <option value="DEPA">DEPA</option>
+                            <option value="DES Mil">DES Mil</option>
+                            <option value="DET Mil">DET Mil</option>
+                            <option value="DF">DF</option>
+                            <option value="DFPC">DFPC</option>
+                            <option value="DGE">DGE</option>
+                            <option value="DGO">DGO</option>
+                            <option value="DGP">DGP</option>
+                            <option value="Dispensa">Dispensa</option>
+                            <option value="DOC">DOC</option>
+                            <option value="DOM">DOM</option>
+                            <option value="DPE">DPE</option>
+                            <option value="DPGO">DPGO</option>
+                            <option value="DPHCEx">DPHCEx</option>
+                            <option value="DPIMA">DPIMA</option>
+                            <option value="DSAU">DSAU</option>
+                            <option value="DSG">DSG</option>
+                            <option value="DSM">DSM</option>
+                            <option value="EME">EME</option>
+                            <option value="EPEx">EPEx</option>
+                            <option value="GAB Cmt Ex">GAB Cmt Ex</option>
+                            <option value="GPG">GPG</option>
+                            <option value="IMBEL">IMBEL</option>
+                            <option value="IME">IME</option>
+                            <option value="PCI EE">PCI EE</option>
+                            <option value="PCI OM">PCI OM</option>
+                            <option value="11ª RM">11ª RM</option>
+                            <option value="SEF">SEF</option>
+                            <option value="SGEx">SGEx</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TAT">TAT</option>
+                            <option value="Visita Médica">Visita Médica</option>
+                            <option value="VOT">VOT</option>
+                            <option value="ATV Gu">ATV Gu</option>
+                            <option value="CPCOM">CPCOM</option>
+                            <option value="Entrega de Espadas">Entrega de Espadas</option>
+                            <option value="GSI">GSI</option>
+                            <option value="MD">MD</option>
+                            <option value="STM">STM</option>
+                            <option value="1º RCG">1º RCG</option>
+                            <option value="11º DeSup">11º DeSup</option>
+                            <option value="32º GAC">32º GAC</option>
+                            <option value="7º CTA">7º CTA</option>
+                            <option value="BGP">BGP</option>
+                            <option value="BPE">BPE</option>
+                            <option value="3º ECMec">3º ECMec</option>
+                            <option value="11º GAE">11º GAE</option>
+                            <option value="HMAB">HMAB</option>
+                            <option value="HFA">HFA</option>
+                            <option value="Passagem de CMD">Passagem de CMD</option>
+                            <option value="Estande de Tiro">Estande de Tiro</option>
+                            <option value="Formatura">Formatura</option>
+                        </select>
+                    </div>
+                </div>
+                <h2>Aniversariantes</h2>
+                <div id="aniversariantes-container"></div>
+            </div>
+
+            <div class="column eventos">
+                <h2>Sistemas</h2>
+                <div class="sistema-container">
+                    <div class="sistema">
+                        <a href="http://focom.daprom.eb.mil.br" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-FOCOM"></span>
+                                <span class="sistema-nome">Focom</span>
+                            </div>
+                        </a>
+
+                        <a href="http://despacho.daprom.eb.mil.br" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-ModDespacho"></span>
+                                <span class="sistema-nome">Mod Despacho</span>
+                            </div>
+                        </a>
+
+                        <a href="http://sisdoc.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-ModDoc"></span>
+                                <span class="sistema-nome">Mod Doc</span>
+                            </div>
+                        </a>
+
+                        <a href="http://fiprom.daprom.eb.mil.br/auth/login" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-fio"></span>
+                                <span class="sistema-nome">Fiprom de Oficias</span>
+                            </div>
+                        </a>
+
+                        <a href="http://fiprom.daprom.eb.mil.br/auth/login" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-fis"> </span>
+                                <span class="sistema-nome">Fiprom de Subtenentes</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sistema">
+                        <a href="http://gra.daprom.eb.mil.br/admin" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item1">
+                                <span class="status-indicator" id="status-ModGra"></span>
+                                <span class="sistema-nome">Mod Gra</span>
+                            </div>
+                        </a>
+                        <a href="http://julg.daprom.eb.mil.br" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-Modjulg"></span>
+                                <span class="sistema-nome">Mod Julg</span>
+                            </div>
+                        </a>
+                        <a href="http://processos.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-ModProcessos"></span>
+                                <span class="sistema-nome">Mod Processos</span>
+                            </div>
+                        </a>
+                        <a href="http://gra.daprom.eb.mil.br/admin" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-qae"></span>
+                                <span class="sistema-nome">Mod Qae</span>
+                            </div>
+                        </a>
+                        <a href="http://oficiais.daprom.eb.mil.br/admin" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-qam"></span>
+                                <span class="sistema-nome">Mod Qam</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sistema">
+                        <a href="http://sgrip.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item1">
+                                <span class="status-indicator" id="status-rip"></span>
+                                <span class="sistema-nome">Mod Rip</span>
+                            </div>
+                        </a>
+                        <a href="http://ot.daprom.eb.mil.br" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-sapo"></span>
+                                <span class="sistema-nome">Mod Sapot</span>
+                            </div>
+                        </a>
+                        <a href="http://qe.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-sap"></span>
+                                <span class="sistema-nome">Mod SAPQE </span>
+                            </div>
+                        </a>
+                        <a href="http://carta.daprom.eb.mil.br/main" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-carta"></span>
+                                <span class="sistema-nome">Mod SICPA</span>
+                            </div>
+                        </a>
+                        <a href="http://votacao.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-vota"></span>
+                                <span class="sistema-nome">Mod Votação </span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sistema">
+                        <a href="http://sisprom.daprom.eb.mil.br" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item1">
+                                <span class="status-indicator" id="status-2.0"></span>
+                                <span class="sistema-nome">Reordena 2.0</span>
+                            </div>
+                        </a>
+                        <a href="http://ressarcimento.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-re"></span>
+                                <span class="sistema-nome">Ressarcimento </span>
+                            </div>
+                        </a>
+                        <a href="http://relator.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-rela"></span>
+                                <span class="sistema-nome">Relator</span>
+                            </div>
+                        </a>
+
+                        <a href="http://suporte.daprom.eb.mil.br/admin/pedido/index" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-sup"></span>
+                                <span class="sistema-nome">Suporte</span>
+                            </div>
+                        </a>
+
+                        <a href="http://relator.daprom.eb.mil.br/" target="_blank" rel="noopener noreferrer">
+                            <div class="sistema-item">
+                                <span class="status-indicator" id="status-relato"></span>
+                                <span class="sistema-nome">Relator</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <h2>Próximos Eventos</h2>
+                <div id="eventos-list"></div>
+                <button id="add-evento" style="margin-top: 10px">
+                    <i class="fas fa-plus"></i> Adicionar Evento
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de Adicionar Evento -->
+    <div class="event-modal" id="eventModal">
+        <h3>Adicionar Evento</h3>
+        <form id="eventForm">
+            <label for="eventName">Nome do Evento:</label>
+            <input type="text" id="eventName" required />
+
+            <label for="eventDate">Data:</label>
+            <input type="date" id="eventDate" required />
+
+            <label for="eventTime">Hora:</label>
+            <input type="time" id="eventTime" required />
+
+            <div class="modal-buttons">
+                <button type="button" onclick="fecharModal()">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <!-- Popup de Alerta -->
+    <div class="alert-modal" id="alertModal">
+        <div class="alert-content">
+            <h3 id="alertTitle"></h3>
+            <p id="alertMessage"></p>
+            <button onclick="fecharAlertModal()">Fechar</button>
+        </div>
+    </div>
+    <div class="modal-backdrop" id="alertBackdrop"></div>
+
+    <!-- Feedback Messages -->
+
+    <script src="script.js"></script>
+</body>
+</div>
+<button class="botao-flutuante" onclick="abrirAgenda()">Agenda</button>
+<script>
+    function abrirAgenda() {
+        window.location.href = "agenda/agenda.html"; // Aqui você modifica para abrir o arquivo HTML na pasta anterior
+    }
+</script>
+<script src="js/relogio.js"></script>
+</body>
+
+</html>
