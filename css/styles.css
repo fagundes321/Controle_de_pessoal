@@ -1,0 +1,713 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.botao-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c51616;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+
+.botao-flutuante:hover {
+    background-color: #0056b3;
+}
+
+/* Correção do calendário nativo */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Garantir visibilidade do calendário */
+.event-modal input[type="date"] {
+    padding: 8px;
+    width: 100%;
+}
+
+/* Modal de Adicionar Evento */
+.event-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 300px;
+}
+
+.event-modal.visible {
+    display: block;
+}
+
+.event-modal h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.event-modal label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.event-modal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-backdrop.visible {
+    display: block;
+}
+
+#eventos-list {
+    width: 100%;
+}
+
+.evento {
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.evento:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.evento:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.evento-info {
+    flex-grow: 1;
+}
+
+.evento-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.evento-actions button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    
+    background-color: #2D6A4F;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header img {
+
+    margin: 0 10px;
+}
+
+.header h1 {
+    
+    position: relative;
+    left: 100px; 
+    font-size: 1.5em;
+    flex-grow: 1;
+    align-itens: center;
+    text-align: center;
+    
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.column_esquerda{
+    flex: 0.5;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.destino, .eventos, .data-horas {
+    background-color: #f8f8f8;
+    border-right: 1px solid #cccccc;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.column_esquerda:last-child {
+    border-right: none;
+}
+
+.column h2 {
+    background-color: #2D6A4F;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.column_esquerda h2{
+    background-color: #2D6A4F;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.destino-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.destino-item .nome {
+    flex: 1;
+    font-weight: bold;
+    color: #2D6A4F;
+    margin-right: 10px;
+}
+
+.destino-item .status {
+    flex: 2;
+}
+
+.select_destino{
+    background-color: white;
+    font-size: larger;
+}
+
+.destino-item .status select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #fafafa;
+    text-align: center;
+}
+
+.horario {
+    margin-top: 20px;
+    text-align: left;
+    color: black;
+}
+.item {
+    margin-bottom: 20px;
+}
+
+.item input,
+.item textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.item input[type="datetime-local"] {
+    padding: 8px;
+}
+
+.item textarea {
+    resize: vertical;
+}
+
+.evento-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.evento-data, .evento-texto {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.delete-evento {
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #e63946;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-evento:hover {
+    background-color: #d62839;
+}
+
+#add-evento {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #2D6A4F;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-evento:hover {
+    background-color: #1b4332;
+}
+
+.foto-militar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.aniversariante-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 30%; /* Define a largura de cada item para que fiquem 3 por linha */
+    justify-content: center; /* Centraliza os itens dentro de cada coluna */
+    margin-right: 10px; /* Espaçamento entre os aniversariantes */
+}
+
+.foto-militar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.nome-aniversariante {
+    font-size: 1em;
+    color: black;
+    text-align: center; /* Alinha o nome do aniversariante ao centro */
+}
+
+#aniversariantes-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando necessário */
+    justify-content: space-between; /* Espaça os itens de forma igual em cada linha */
+}
+
+#alert-sound {
+    display: none; /* Para esconder o elemento de áudio */
+}
+
+.fundo-titulo {
+    background-color: #2D6A4F;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: black; /* Define a cor do texto como preto */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.popup-content .close {
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sistema-item1 { display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+} 
+
+.sistema-item { display: flex; align-items: center; margin-bottom: 10px; } .status-indicator { width: 15px; height: 15px; border-radius: 50%; margin-right: 10px; } .sistema-nome { font-size: 1em; color: black; /* Cor preta para o nome do sistema */ }
+
+.status-indicator { 
+    width: 15px; 
+    height: 15px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+} 
+
+.sistema-nome { font-size: 1em; 
+    color: black; /* Cor preta para o nome do sistema */ 
+}
+
+.sistema-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.sistema{
+    flex:1;
+}
+
+.evento-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.evento-data, .evento-texto {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.delete-evento {
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #e63946;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-evento:hover {
+    background-color: #d62839;
+}
+
+#add-evento {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #2D6A4F;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-evento:hover {
+    background-color: #1b4332;
+}
+
+.popup {
+    display: none; /* Oculto por padrão */
+
+}
+/* Alert Modal */
+/* Adicione ao CSS */
+.alert-modal {
+    color: black; /* Texto preto no alerta */
+    background: #dc3546;
+    
+    border-radius: 100px;
+    padding: 20px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.alert-modal button {
+    background: rgb(194, 23, 23);
+    color: #0f0101;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+#alertModal.visible {
+    display: block;
+}
+
+.alert-content {
+    text-align: center;
+}
+
+/* Feedback Messages */
+#feedbackMessage {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1003;
+    display: none;
+}
+/* Adicione ao CSS */
+.alert-modal {
+    background: #dc3546;
+    color: rgb(5, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.alert-modal button {
+    background: white;
+    color: #dc3546;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Correção do calendário nativo */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Garantir visibilidade do calendário */
+.event-modal input[type="date"] {
+    padding: 8px;
+    width: 100%;
+}
+     /* Modal de Adicionar Evento */
+.event-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 1001;
+    width: 300px;
+}
+
+.event-modal.visible {
+    display: block;
+}
+
+.event-modal h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.event-modal label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.event-modal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-backdrop.visible {
+    display: block;
+}
+    #eventos-list {
+        width: 100%;
+    }
+    .evento {
+        display: flex;
+        font-size: 25px;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    .evento:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .evento:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    .evento-info {
+        flex-grow: 1;
+    }
+    .evento-actions {
+        display: flex;
+        gap: 10px;
+    }
+    .evento-actions button{
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+    /* Alert Modal */
+.alert-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    z-index: 2000;
+    min-width: 300px;
+    text-align: center;
+}
+
+.alert-modal button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #2D6A4F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.alert-modal button:hover {
+    background-color: #1b4332;
+}
+
+/* Relogio */
+
+.relogio{
+    position: relative;
+    right: 20px; 
+}
+
+.relogio div{
+
+    background-color: #1b4332;
+    border-radius: 15px;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+
+
+  
+  .time {
+    color: #fff;
+    font-size: 2rem;
+  }
+  
