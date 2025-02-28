@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="logo-group">
+                <img src="img/logo_DAPROM.png" alt="DAPROM" class="logo">
+                <h1>DIRETORIA DE AVALIAÇÃO E PROMOÇÕES</h1>
+                <img src="img/logoexer.png" alt="Exército" class="logo">
+            </div>
+            <div class="button-group">
+                <button class="add-button" onclick="openForm()">Adicionar Militar</button>
+                <button class="add-button2" onclick="voltar()">VOLTAR</button>
+            </div>
+        </header>
+        <br>
+        <main class="content-container">
+            
+            <div class="sections-grid">
+                <div class="section-card" id="1-secao">
+                    <h2>1ª Seção</h2>
+                    <div id="1-secao-list" class="militares-list"></div>
+                </div>
+                <div class="section-card" id="2-secao">
+                    <h2>2ª Seção</h2>
+                    <div id="2-secao-list" class="militares-list"></div>
+                </div>
+                <div class="section-card" id="3-secao">
+                    <h2>3ª Seção</h2>
+                    <div id="3-secao-list" class="militares-list"></div>
+                </div>
+                <div class="section-card" id="4-secao">
+                    <h2>4ª Seção</h2>
+                    <div id="4-secao-list" class="militares-list"></div>
+                </div>
+                <div class="section-card" id="base-ap-as-jura">
+                    <h2>Base Ap As Jura</h2>
+                    <div id="base-ap-as-jura-list" class="militares-list"></div>
+                </div>
+                <div class="section-card" id="apg">
+                    <h2>APG</h2>
+                    <div id="apg-list" class="militares-list"></div>
+                </div>
+                <div class="section-card" id="informatica">
+                    <h2>Informática</h2>
+                    <div id="informatica-list" class="militares-list"></div>
+                </div>
+                <div class="section-card" id="ajg">
+                    <h2>AJG</h2>
+                    <div id="ajg-list" class="militares-list"></div>
+                </div>
+            </div>
+        </main>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p id="militar-info"></p>
+            </div>
+        </div>
+
+        <div id="form-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeForm()">&times;</span>
+                <h2>Adicionar Militar</h2>
+                <form id="militar-form" onsubmit="addMilitar(event)">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pin">PIN da Impressora:</label>
+                        <input type="text" id="pin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="secao">Seção:</label>
+                        <select id="secao" required>
+                            <option value="1-secao">1ª Seção</option>
+                            <option value="2-secao">2ª Seção</option>
+                            <option value="3-secao">3ª Seção</option>
+                            <option value="4-secao">4ª Seção</option>
+                            <option value="base-ap-as-jura">Base Ap As Jura</option>
+                            <option value="apg">APG</option>
+                            <option value="informatica">Informática</option>
+                            <option value="ajg">AJG</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Adicionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+
+    <script>
+        function voltar() {
+            window.location.href = "../index.html"; // Caminho para o arquivo index.html na pasta raiz
+        }
+        </script>
+</body>
+</html>
